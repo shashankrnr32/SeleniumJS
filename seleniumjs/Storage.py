@@ -2,7 +2,7 @@
 Developer : Shashank Sharma
 License : MIT Free License 
 Reference : https://www.w3schools.com/jsref/obj_storage.asp
-https://www.w3schools.com/jsref/prop_win_sessionstorage.asp
+            https://www.w3schools.com/jsref/prop_win_sessionstorage.asp
 '''
 class StorageMethod:
     OBJ_LOCAL = 'localStorage'

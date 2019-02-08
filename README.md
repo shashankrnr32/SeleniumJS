@@ -13,32 +13,39 @@ Execute Javascript code as it is without having to use execute_script() of the s
 Install instructions coming soon as setup.py is yet to be updated. Use the package now by copying the `seleniumjs` folder to your project directory
 
 ## Usage
-1. Usage of Console Class 
+Usage of Console Class 
 
-		from seleniumjs.Console import Console
-		console = Console(driver)
-		console.time()
-		console.log('Hello World!!')
-		console.timeEnd()
-	> **Warning** : Console class does not support assert function
+```python
+	from seleniumjs.Console import Console
+	console = Console(driver)
+	console.time()
+	console.log('Hello World!!')
+	console.timeEnd()
+```
+> **Warning** : Console class does not support assert function
 
-2. Usage of Location Class
-
-		from seleniumjs.Location import Location
-		location = Location(driver)
-		print(location.href)
+Usage of Location Class
 	
-		from seleniumjs.Location import LocationProperty
-		location.setProperty(LocationProperty.HASH,'id_value')
+```python
+	from seleniumjs.Location import Location
+	location = Location(driver)
+	print(location.href)
 
+	from seleniumjs.Location import LocationProperty
+	location.setProperty(LocationProperty.HASH,'id_value')
+```	
+		
 3. Usage of LocalStorage/SessionStorage
+```python
+	from seleniumjs.Storage import SessionStorage
+	#import LocalStorage instead of SessionStorage
+	sessionStorage = SessionStorage(driver)
+	
+	print(sessionStorage.length)
+	sessionStorage.getItem('key', 'value')
+```
 
-		from seleniumjs.Storage import SessionStorage
-		#import LocalStorage instead of SessionStorage
-		sessionStorage = SessionStorage(driver)
-		
-		print(sessionStorage.length)
-		sessionStorage.getItem('key', 'value')
-		
 ## License
 MIT Free License held by [Shashank Sharma](mailto:shashankrnr32@gmail.com)
+
+This project is not funded/supported by Selenium. To know more about SeleniumHQ visit [here](https://www.seleniumhq.org/)
