@@ -35,7 +35,7 @@ Usage of Location Class
 	location.setProperty(LocationProperty.HASH,'id_value')
 ```	
 		
-3. Usage of LocalStorage/SessionStorage
+Usage of LocalStorage/SessionStorage
 ```python
 	from seleniumjs.Storage import SessionStorage
 	#import LocalStorage instead of SessionStorage
