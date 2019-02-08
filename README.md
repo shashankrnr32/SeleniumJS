@@ -7,7 +7,7 @@ Execute Javascript code as it is without having to use execute_script() of the s
 1. [console](https://www.w3schools.com/jsref/obj_console.asp)
 2. [location](https://www.w3schools.com/jsref/obj_location.asp)
 3. [sessionStorage](https://www.w3schools.com/jsref/prop_win_sessionstorage.asp)
-4. [localStorage] (https://www.w3schools.com/jsref/obj_storage.asp)
+4. [localStorage](https://www.w3schools.com/jsref/obj_storage.asp)
 
 ## Install
 Install instructions coming soon as setup.py is yet to be updated. Use the package now by copying the `seleniumjs` folder to your project directory
