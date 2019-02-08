@@ -6,7 +6,7 @@ def read(fname):
 
 setup(
     name = "seleniumjs",
-    version = "1.0.2",
+    version = "1.0.3",
     author = "Shashank Sharma",
     author_email = "shashankrnr32@gmail.com",
     description = ("Python Package to run Javascript code snippets easily on Selenium"),

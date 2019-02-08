@@ -12,7 +12,7 @@ Execute Javascript code as it is without having to use execute_script() of the s
 ## Install
 To Install using pip
 
-	pip install -i https://test.pypi.org/simple/ seleniumjs
+	pip install seleniumjs
 
 Steps to install to your project directory
 
