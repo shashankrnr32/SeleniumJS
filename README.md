@@ -13,7 +13,7 @@ Execute Javascript code as it is without having to use execute_script() of the s
 Install instructions coming soon as setup.py is yet to be updated. Use the package now by copying the `seleniumjs` folder to your project directory
 
 ## Usage
-Usage of Console Class 
+#### Usage of Console Class 
 
 ```python
 	from seleniumjs.Console import Console
@@ -24,7 +24,7 @@ Usage of Console Class
 ```
 > **Warning** : Console class does not support assert function
 
-Usage of Location Class
+#### Usage of Location Class
 	
 ```python
 	from seleniumjs.Location import Location
@@ -35,7 +35,7 @@ Usage of Location Class
 	location.setProperty(LocationProperty.HASH,'id_value')
 ```	
 		
-Usage of LocalStorage/SessionStorage
+#### Usage of LocalStorage/SessionStorage
 ```python
 	from seleniumjs.Storage import SessionStorage
 	#import LocalStorage instead of SessionStorage
