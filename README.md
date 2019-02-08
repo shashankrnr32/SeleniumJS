@@ -10,7 +10,14 @@ Execute Javascript code as it is without having to use execute_script() of the s
 4. [localStorage](https://www.w3schools.com/jsref/obj_storage.asp)
 
 ## Install
-Install instructions coming soon as setup.py is yet to be updated. Use the package now by copying the `seleniumjs` folder to your project directory
+To Install using pip
+
+	pip install -i https://test.pypi.org/simple/ seleniumjs
+
+Steps to install to your project directory
+
+1. Clone the project to your project directory
+2. run the command `python3 setup.py install`
 
 ## Usage
 #### Usage of Console Class 
