@@ -1,3 +1,4 @@
+
 # SeleniumJS
 
 >v1.0.12 Beta
@@ -24,15 +25,26 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 
 ## Usage
 1. **Console Class**
-		<details>
-		  <summary>Click to expand!</summary>
-		  
-		  ## Heading
-		  1. A numbered
-		  2. list
-			 * With some
-			 * Sub bullets
-		</details>
+	
+	<details>
+		<summary>Properties and Methods Supported</summary>
+	
+		console.clear()
+		console.count(label = None)
+		console.countReset(label = None)
+		console.error(message)
+		console.group(label = None)
+		console.groupCollapsed(label = None)
+		console.groupEnd(label = None)
+		console.info(message)
+		console.log(message)
+		console.table(object)
+		console.time(label = None)
+		console.timeEnd(label = None)
+		console.timeLog(label = None)
+		console.trace(label = None)
+		console.warn(message)
+	</details>
 
 	```python
 	from seleniumjs import Console
@@ -42,8 +54,6 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 	console.log('This is seleniumjs')
 	console.timeEnd()
 	```
-	**Warning** : `Console` doesnt support `assert` method
-	
  
 2. **Location Class**
 
