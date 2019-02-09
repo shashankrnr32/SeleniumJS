@@ -1,6 +1,6 @@
 # SeleniumJS
 
->v1.0.11
+>v1.0.11 Beta
 
 Execute Javascript code with selenium.webdriver easily without the need of execute_script(#). Currently supports 5 DOM Objects and a lot more coming to the project soon.
 
