@@ -25,6 +25,14 @@ class Console:
                 label
                 )
     
+    def countReset(self, label=None):
+        if not label : 
+            label = 'default'
+        self.driver.execute_script(
+                self.xScript(method = 'countReset'), 
+                label
+                )
+    
     def error(self, message):
         self.driver.execute_script(
                 self.xScript(method = 'error'), 
@@ -95,7 +103,16 @@ class Console:
                 self.xScript(method = 'timeEnd'), 
                 label
                 )
+    
+    def timeLog(self,label = None):
+        if not label : 
+            label = 'default'
         
+        self.driver.execute_script(
+                self.xScript(method = 'timeLog'), 
+                label
+                )
+   
     def trace(self, label = None):
         if not label : 
             label = '{0}.{1}'.format(

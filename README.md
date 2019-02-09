@@ -24,6 +24,15 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 
 ## Usage
 1. **Console Class**
+		<details>
+		  <summary>Click to expand!</summary>
+		  
+		  ## Heading
+		  1. A numbered
+		  2. list
+			 * With some
+			 * Sub bullets
+		</details>
 
 	```python
 	from seleniumjs import Console
