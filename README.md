@@ -11,6 +11,7 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 3. [sessionStorage](https://www.w3schools.com/jsref/prop_win_sessionstorage.asp)
 4. [localStorage](https://www.w3schools.com/jsref/obj_storage.asp)
 5. [history](https://www.w3schools.com/jsref/obj_history.asp)
+6. [navigator](https://www.w3schools.com/jsref/obj_navigator.asp)
 ## Install
 1. To Install using pip
 
@@ -56,7 +57,7 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 	
 	**Info** : Use `LocalStorage` instead of `SessionStorage`
 
-4. **History**
+4. **History Class**
 
 	```python
 	from seleniumjs import History
@@ -65,7 +66,19 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 	history.back()
 	print(history.length)
 	```
-	
+5. **Navigator Class**
+
+	```python
+	from seleniumjs import Navigator
+	navigator = Navigator(driver)
+	print(navigator.appCodeName)
+	print(navigator.language)
+	```
+	**Warning** : Console doesnt support geolocation(yet)
+## Testing
+
+The package is under development with testing being done in [Google Chrome](https://sites.google.com/a/chromium.org/chromedriver/) and [Mozilla Firefox](https://github.com/mozilla/geckodriver/). Project will be tested in Edge, Opera in the future releases. Contribute to this project by testing it in Safari. 
+
 ## License
 MIT Free License held by [Shashank Sharma](mailto:shashankrnr32@gmail.com)
 
