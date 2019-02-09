@@ -29,6 +29,10 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 	<details>
 		<summary>Properties and Methods Supported</summary>
 	
+	*Properties* :
+			
+	*Methods* :
+	
 		console.clear()
 		console.count(label = None)
 		console.countReset(label = None)
@@ -57,6 +61,27 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
  
 2. **Location Class**
 
+	<details>
+			<summary>Properties and Methods Supported</summary>
+		
+	*Properties* :
+
+		location.hash
+		location.host
+		location.hostname
+		location.href
+		location.origin
+		location.pathname
+		location.port
+		location.protocol
+		location.search
+	*Methods* : 
+	
+		location.assign(URL)
+		location.reload()
+		location.replace(URL)
+	</details>
+	
 	```python
 	from seleniumjs import Location
 	location = Location(driver)
