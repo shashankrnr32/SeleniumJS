@@ -2,76 +2,95 @@
 Developer : Shashank Sharma
 License : MIT Free License 
 Reference : https://www.w3schools.com/jsref/obj_location.asp
-
-
 '''
-class LocationProperty:
-    OBJ = 'location'
-    HASH = 'hash'
-    HOST = 'host'
-    HOSTNAME = 'hostname'
-    HREF = 'href'
-    ORIGIN = 'origin'
-    PATHNAME = 'pathname'
-    PORT = 'port'
-    PROTOCOL = 'protocol'
-    SEARCH = 'search'
-
-class LocationMethod:
-    ASSIGN = 'assign'
-    RELOAD = 'reload'
-    REPLACE = 'replace'
-    
 class Location:
     def __init__(self,driver):
         self.driver = driver
-        self.hash = driver.execute_script('return {0}.{1}'.format(LocationProperty.OBJ, LocationProperty.HASH))
-        self.host = driver.execute_script('return {0}.{1}'.format(LocationProperty.OBJ, LocationProperty.HOST))
-        self.hostname = driver.execute_script('return {0}.{1}'.format(LocationProperty.OBJ, LocationProperty.HOSTNAME))
-        self.href = driver.execute_script('return {0}.{1}'.format(LocationProperty.OBJ, LocationProperty.HREF))
-        self.origin = driver.execute_script('return {0}.{1}'.format(LocationProperty.OBJ, LocationProperty.ORIGIN))
-        self.pathname = driver.execute_script('return {0}.{1}'.format(LocationProperty.OBJ, LocationProperty.PATHNAME))
-        self.port = driver.execute_script('return {0}.{1}'.format(LocationProperty.OBJ, LocationProperty.PORT))
-        self.protocol = driver.execute_script('return {0}.{1}'.format(LocationProperty.OBJ, LocationProperty.PROTOCOL))
-        self.search = driver.execute_script('return {0}.{1}'.format(LocationProperty.OBJ, LocationProperty.SEARCH))
-    
-    def xScript(self,method = LocationMethod.RELOAD,argument_index = 0):
-        '''
-        detail : 
-            Method to Generate Script based on the LocationMethod called. 
-            This method is named xScript() just to make the methods accessible in alphabetical order
-        param:
-            method : 
-                type : str
-                default : 'reload' (ConsoleMethod.RELOAD)
-                details : type of Location method called
-                eg : LocationMethod.RELOAD, LocationMethod.REPLACE
-            argument_index : 
-                type : int
-                default : 0
-                details : index of argument that is passed in execute_script(script,*args)
-                eg : 1, 5, 7
-        return:
-            A string containing a line of code in JS
-        '''
-        return '{0}.{1}(arguments[{2}])'.format(LocationProperty.OBJ, method, argument_index)
+        self._href = self.href
+        
+    def xScript(self,method = 'reload',argument_index = 0):
+        return '{0}.{1}(arguments[{2}]);'.format('location', method, argument_index)
     
     def assign(self,URL):
         self.driver.get(URL)
-        self.__init__(self.driver)
-    
+        
     def reload(self):
         self.driver.refresh()
-        self.__init__(self.driver)
-        
+            
     def replace(self,URL):
         self.driver.execute_script(
-                self.xScript(LocationMethod.REPLACE),URL
+                self.xScript('replace'),URL
                 )
     
-    def setProperty(self,prop = LocationProperty.HREF, value='https://www.yahoo.com'):
-        self.driver.execute_script('{0}.{1} = {2}'.format(
-                LocationProperty.OBJ, prop, value)
-                )
-        self.__init__(self.driver)
+    @property
+    def hash(self):
+        return self.driver.execute_script('return location.hash;')
     
+    @hash.setter
+    def hash(self,anchorname):
+        self.driver.execute_script('location.hash = \'{}\''.format(anchorname))
+       
+    @property   
+    def host(self):
+        return self.driver.execute_script('return location.host')
+    
+    @host.setter
+    def host(self, host):
+        self.driver.execute_script('location.host = \'{}\''.format(host))
+        
+    @property
+    def hostname(self):
+        return self.driver.execute_script('return location.hostname')
+    
+    @hostname.setter
+    def hostname(self, hostname):
+        self.driver.execute_script('location.hostname = \'{}\''.format(hostname))
+        
+    @property
+    def href(self):
+        self._href = self.driver.execute_script('return location.href')
+        return self._href
+    
+    @href.setter
+    def href(self, URL):
+        self._href = self.driver.execute_script('location.href = \'{}\''.format(URL))
+    
+    @property
+    def origin(self):
+        self.driver.execute_script('return location.origin')
+        
+    @origin.setter
+    def origin(self, origin):
+        self.driver.execute_script('location.origin = \'{}\''.format(origin))
+        
+    @property
+    def pathname(self):
+        return self.driver.execute_script('return location.pathname')
+        
+    @pathname.setter
+    def pathname(self, pathname):
+        self.driver.execute_script('location.pathname = \'{}\''.format(pathname))
+        
+    @property
+    def port(self):
+        return self.driver.execute_script('return loacation.port')
+    
+    @port.setter
+    def port(self, port):
+        self.driver.execute_script('location.port = \'{}\''.format(port))
+    
+    @property
+    def protocol(self):
+        return self.driver.execute_script('return location.protocol')
+    
+    @protocol.setter
+    def protocol(self, protocol):
+        self.driver.execute_script('location.protocol = \'{}\''.format(protocol))
+        
+    @property
+    def search(self):
+        return self.driver.execute_script('return loacation.protocol')
+    
+    @search.setter
+    def search(self, search):
+        self.driver.execute_script('location.search = \'{}\''.format(search))

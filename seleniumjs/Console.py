@@ -5,111 +5,76 @@ Reference : https://www.w3schools.com/jsref/obj_console.asp
 
 Warning : console.assert() is not supported in this package.
 '''
-class ConsoleMethod:
-    OBJ = 'console'
-    CLEAR = 'clear'
-    COUNT = 'count'
-    ERROR = 'error'
-    GROUP = 'group'
-    GROUPCOLLAPSED = 'groupCollapsed'
-    GROUPEND = 'groupEnd'
-    INFO = 'info'
-    LOG = 'log'
-    TABLE = 'table'
-    TIME = 'time'
-    TIMEEND = 'timeEnd'
-    TRACE = 'trace'
-    WARN = 'warn'
-    
-   
 class Console:    
     def __init__(self, driver):
         self.driver = driver
         
-    def xScript(self ,method=ConsoleMethod.LOG, argument_index = 0):
-        '''
-        detail : 
-            Method to Generate Script based on the ConsoleMethod called. 
-            This method is named xScript() just to make the methods accessible in alphabetical order
-        param:
-            method : 
-                type : str
-                default : 'log' (ConsoleMethod.LOG)
-                details : type of console method called
-                eg : ConsoleMethod.LOG, ConsoleMethod.CLEAR
-            argument_index : 
-                type : int
-                default : 0
-                details : index of argument that is passed in execute_script(script,*args)
-                eg : 1, 5, 7
-        return:
-            A string containing a line of code in JS
-        '''
-        return '{0}.{1}(arguments[{2}]);'.format(ConsoleMethod.OBJ, method, argument_index)
+    def xScript(self ,method='log', argument_index = 0):
+        return '{0}.{1}(arguments[{2}]);'.format('console', method, argument_index)
     
     def clear(self):
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.CLEAR)
+                self.xScript(method = 'clear')
                 )
     
     def count(self, label=None):
         if not label : 
             label = 'default'
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.COUNT), 
+                self.xScript(method = 'count'), 
                 label
                 )
     
     def error(self, message):
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.ERROR), 
+                self.xScript(method = 'error'), 
                 message
                 )
     
     def group(self, label = None):
         if not label : 
             label = '{0}.{1}'.format(
-                    ConsoleMethod.OBJ, 
-                    ConsoleMethod.GROUP
+                    'console', 
+                    'group'
                     )
         
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.GROUP), 
+                self.xScript(method = 'group'), 
                 label
                 )
         
     def groupCollapsed(self, label = None):
         if not label : 
             label = '{0}.{1}'.format(
-                    ConsoleMethod.OBJ, 
-                    ConsoleMethod.GROUP
+                    'console', 
+                    'groupCollapsed'
                     )
         
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.GROUPCOLLAPSED), 
+                self.xScript(method = 'groupCollapsed'), 
                 label
                 )
     
     def groupEnd(self):
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.GROUPEND)
+                self.xScript(method = 'groupEnd')
                 )
     
     def info(self, message):
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.INFO), 
+                self.xScript(method = 'info'), 
                 message
                 )
         
     def log(self,message):
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.LOG), 
+                self.xScript(method = 'log'), 
                 message
                 )
     
     def table(self,tabledata):
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.TABLE), 
+                self.xScript(method = 'table'), 
                 tabledata
                 )
          
@@ -118,7 +83,7 @@ class Console:
             label = 'default'
             
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.TIME), 
+                self.xScript(method = 'time'), 
                 label
                 )
         
@@ -127,25 +92,25 @@ class Console:
             label = 'default'
         
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.TIMEEND), 
+                self.xScript(method = 'timeEnd'), 
                 label
                 )
         
     def trace(self, label = None):
         if not label : 
             label = '{0}.{1}'.format(
-                    ConsoleMethod.OBJ, 
-                    ConsoleMethod.TRACE
+                    'console', 
+                    'trace'
                     )
             
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.TRACE), 
+                self.xScript(method = 'trace'), 
                 label
                 )
         
     def warn(self, message):
         self.driver.execute_script(
-                self.xScript(method = ConsoleMethod.WARN), 
+                self.xScript(method = 'warn'), 
                 message
                 )    
 
