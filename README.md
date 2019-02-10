@@ -9,10 +9,9 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 	
 1. [console](https://www.w3schools.com/jsref/obj_console.asp)
 2. [location](https://www.w3schools.com/jsref/obj_location.asp)
-3. [sessionStorage](https://www.w3schools.com/jsref/prop_win_sessionstorage.asp)
-4. [localStorage](https://www.w3schools.com/jsref/obj_storage.asp)
-5. [history](https://www.w3schools.com/jsref/obj_history.asp)
-6. [navigator](https://www.w3schools.com/jsref/obj_navigator.asp)
+3. [storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage)
+4. [history](https://www.w3schools.com/jsref/obj_history.asp)
+5. [navigator](https://www.w3schools.com/jsref/obj_navigator.asp)
 ## Install
 1. To Install using pip
 
@@ -90,7 +89,25 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 	print(location.hash)
 	```
 	
-3. **Storage Class**
+3. **Storage Module**
+	<details>
+			<summary>Properties and Methods Supported</summary>
+	*Classes*
+		LocalStorage
+		SessionStorage
+		
+	*Properties* :
+
+		sessionStorage.length
+	*Methods* : 
+	
+		sessionStorage.key(n)
+		sessionStorage.getItem(keyname)
+		sessionStorage.setItem(keyname, value)
+		sessionStorage.removeItem(keyname)
+		sessionStorage.clear()
+		
+	</details>
 	
 	```python
 	from seleniumjs import SessionStorage
