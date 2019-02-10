@@ -92,7 +92,9 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 3. **Storage Module**
 	<details>
 			<summary>Properties and Methods Supported</summary>
+	
 	*Classes*
+	
 		LocalStorage
 		SessionStorage
 		
