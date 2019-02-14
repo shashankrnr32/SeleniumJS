@@ -23,9 +23,6 @@ class Navigator:
     def cookieEnabled(self):
         return self.driver.execute_script('return navigator.cookieEnabled')
     
-    @property
-    def geolocation(self):
-        return 'Not Supported Yet'
     
     @property
     def language(self):
@@ -49,4 +46,5 @@ class Navigator:
     
     def javaEnabled(self):
         return self.driver.execute_script('return navigator.javaEnabled()')
-        
+     
+    

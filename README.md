@@ -90,6 +90,7 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 	```
 	
 3. **Storage Module**
+	
 	<details>
 			<summary>Properties and Methods Supported</summary>
 	
@@ -101,6 +102,7 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 	*Properties* :
 
 		sessionStorage.length
+	
 	*Methods* : 
 	
 		sessionStorage.key(n)
@@ -121,7 +123,22 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 	**Info** : Use `LocalStorage` instead of `SessionStorage`
 
 4. **History Class**
+	
+	<details>
+			<summary>Properties and Methods Supported</summary>
+	
+	*Properties* :
 
+		history.length
+	
+	*Methods* : 
+	
+		history.back()
+		history.forward()
+		history.go(numORurl)
+		
+	</details>
+	
 	```python
 	from seleniumjs import History
 	history = History(driver)
@@ -130,7 +147,13 @@ Execute Javascript code with selenium.webdriver easily without the need of execu
 	print(history.length)
 	```
 5. **Navigator Class**
-
+	<details>
+			<summary>Properties and Methods Supported</summary>
+	
+	Details coming soon.
+		
+	</details>
+	
 	```python
 	from seleniumjs import Navigator
 	navigator = Navigator(driver)
