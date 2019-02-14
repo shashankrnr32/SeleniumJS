@@ -4,3 +4,4 @@ from seleniumjs.Location import Location
 from seleniumjs.Storage import *
 from seleniumjs.History import History
 from seleniumjs.Navigator import Navigator
+from seleniumjs.PopUp import alert, confirm, prompt

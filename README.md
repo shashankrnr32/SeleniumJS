@@ -5,7 +5,7 @@
 
 Execute Javascript code with selenium.webdriver easily without the need of execute_script(#). Currently supports 5 DOM Objects and a lot more coming to the project soon.
 
-## Currently Supporting  DOM Objects
+## Currently Supporting Modules
 	
 1. [console](https://www.w3schools.com/jsref/obj_console.asp)
 2. [location](https://www.w3schools.com/jsref/obj_location.asp)
